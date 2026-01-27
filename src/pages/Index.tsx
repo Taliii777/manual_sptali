@@ -1,25 +1,30 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useState } from "react";
 import SolwareLogo from "@/components/docs/SolwareLogo";
 import IconoSeccion from "@/components/docs/IconoSeccion";
 import { seccionesManual } from "@/components/docs/Sidebar";
 import Footer from "@/components/docs/Footer";
+import Header from "@/components/docs/Header";
 
 const Index = () => {
+  const [menuAbierto, setMenuAbierto] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col">
+      <Header onMenuClick={() => setMenuAbierto(!menuAbierto)} menuAbierto={menuAbierto} />
+      
       {/* Hero */}
       <header className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
         <div className="container py-16 lg:py-24">
           <div className="max-w-3xl mx-auto text-center">
-            <SolwareLogo className="h-12 w-auto mx-auto mb-8" />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Manual para tiendas{" "}
-              <span className="text-gradient">Shopify</span>
+            <SolwareLogo className="h-32 md:h-40 lg:h-48 w-auto mx-auto mb-8" />
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-10">
+              Manual{" "}
+              <span className="text-gradient">SolHub</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Guía completa para operar tu tienda Shopify de manera eficiente. 
-              Desde procesar ventas hasta reportes y análisis.
+              Tu guía completa para una gestión sin límites
             </p>
             <Link
               to="/docs/introduccion"
@@ -39,12 +44,9 @@ const Index = () => {
       {/* Secciones */}
       <main className="flex-1 py-16 lg:py-24">
         <div className="container">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
             Contenido del Manual
           </h2>
-          <p className="text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-            10 secciones que cubren todos los aspectos de la operación de una tienda Shopify
-          </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {seccionesManual.map((seccion) => (

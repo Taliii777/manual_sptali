@@ -74,6 +74,14 @@ export const seccionesManual = [
     descripcion: "FAQ y recursos adicionales",
     posicion: 10,
   },
+  {
+    id: "solhub",
+    titulo: "Solhub",
+    ruta: "https://www.solhub.agency/",
+    descripcion: "Software médico inteligente",
+    posicion: 11,
+    esExterno: true,
+  },
 ];
 
 interface SidebarProps {
@@ -110,35 +118,57 @@ const Sidebar = ({ abierto, onCerrar }: SidebarProps) => {
 
           <ul className="space-y-1">
             {seccionesManual.map((seccion) => {
-              const activo = location.pathname === seccion.ruta;
+              const activo = !seccion.esExterno && location.pathname === seccion.ruta;
+              const esExterno = seccion.esExterno || false;
+              
+              const contenido = (
+                <>
+                  <IconoSeccion seccion={seccion.id} tamaño="sm" />
+                  <div className="flex-1 min-w-0">
+                    <span className="block truncate text-sm">
+                      {seccion.titulo}
+                    </span>
+                    {activo && (
+                      <span className="block truncate text-xs text-muted-foreground mt-0.5">
+                        {seccion.descripcion}
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-xs text-muted-foreground">
+                    {seccion.posicion}
+                  </span>
+                </>
+              );
               
               return (
                 <li key={seccion.id}>
-                  <Link
-                    to={seccion.ruta}
-                    onClick={onCerrar}
-                    className={cn(
-                      "flex items-center gap-3 rounded-lg px-3 py-2.5 transition-all duration-200",
-                      activo
-                        ? "bg-primary/10 text-primary font-medium"
-                        : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
-                    )}
-                  >
-                    <IconoSeccion seccion={seccion.id} tamaño="sm" />
-                    <div className="flex-1 min-w-0">
-                      <span className="block truncate text-sm">
-                        {seccion.titulo}
-                      </span>
-                      {activo && (
-                        <span className="block truncate text-xs text-muted-foreground mt-0.5">
-                          {seccion.descripcion}
-                        </span>
+                  {esExterno ? (
+                    <a
+                      href={seccion.ruta}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={onCerrar}
+                      className={cn(
+                        "flex items-center gap-3 rounded-lg px-3 py-2.5 transition-all duration-200",
+                        "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
                       )}
-                    </div>
-                    <span className="text-xs text-muted-foreground">
-                      {seccion.posicion}
-                    </span>
-                  </Link>
+                    >
+                      {contenido}
+                    </a>
+                  ) : (
+                    <Link
+                      to={seccion.ruta}
+                      onClick={onCerrar}
+                      className={cn(
+                        "flex items-center gap-3 rounded-lg px-3 py-2.5 transition-all duration-200",
+                        activo
+                          ? "bg-primary/10 text-primary font-medium"
+                          : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                      )}
+                    >
+                      {contenido}
+                    </Link>
+                  )}
                 </li>
               );
             })}

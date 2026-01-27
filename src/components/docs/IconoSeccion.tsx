@@ -9,6 +9,8 @@ import {
   Shield, 
   BarChart3, 
   HelpCircle,
+  Home,
+  Stethoscope,
   LucideIcon
 } from "lucide-react";
 
@@ -24,6 +26,8 @@ const iconosPorSeccion: Record<string, LucideIcon> = {
   seguridad: Shield,
   reportes: BarChart3,
   soporte: HelpCircle,
+  definicion: Home,
+  solhub: Stethoscope,
 };
 
 // Colores de fondo para cada sección
@@ -38,6 +42,8 @@ const coloresPorSeccion: Record<string, string> = {
   seguridad: "bg-red-500/10 text-red-500",
   reportes: "bg-emerald-500/10 text-emerald-500",
   soporte: "bg-amber-500/10 text-amber-500",
+  definicion: "bg-cyan-500/10 text-cyan-500",
+  solhub: "bg-teal-500/10 text-teal-500",
 };
 
 interface IconoSeccionProps {

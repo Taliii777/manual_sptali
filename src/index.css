@@ -334,3 +334,13 @@
 .footer-solware .footer__copyright {
   color: #e0e0e0 !important;
 }
+
+/* Ocultar scrollbar en el footer */
+.footer-solware * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+}
+
+.footer-solware *::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
