@@ -16,6 +16,20 @@ import {
 
 // Mapeo de iconos por sección
 const iconosPorSeccion: Record<string, LucideIcon> = {
+  // Nueva estructura SolHub
+  inicio: Home,
+  "como-instalar-solhub": BookOpen,
+  solhub: Stethoscope,
+  "exp-propietario": Users,
+  "exp-recepcionista": Users,
+  "exp-medico-residente": ClipboardList,
+  "exp-medico-citotecnologo": ClipboardList,
+  "exp-medico-patologo": ClipboardList,
+  "exp-medico-owner": Shield,
+  final: HelpCircle,
+  "roles-permisos": Shield,
+
+  // Legado (por compatibilidad)
   introduccion: BookOpen,
   ventas: ShoppingCart,
   productos: Package,
@@ -27,11 +41,24 @@ const iconosPorSeccion: Record<string, LucideIcon> = {
   reportes: BarChart3,
   soporte: HelpCircle,
   definicion: Home,
-  solhub: Stethoscope,
 };
 
 // Colores de fondo para cada sección
 const coloresPorSeccion: Record<string, string> = {
+  // Nueva estructura SolHub
+  inicio: "bg-primary/10 text-primary",
+  "como-instalar-solhub": "bg-cyan-500/10 text-cyan-500",
+  solhub: "bg-teal-500/10 text-teal-500",
+  "exp-propietario": "bg-accent/10 text-accent",
+  "exp-recepcionista": "bg-pink-500/10 text-pink-500",
+  "exp-medico-residente": "bg-blue-500/10 text-blue-500",
+  "exp-medico-citotecnologo": "bg-purple-500/10 text-purple-500",
+  "exp-medico-patologo": "bg-orange-500/10 text-orange-500",
+  "exp-medico-owner": "bg-red-500/10 text-red-500",
+  final: "bg-amber-500/10 text-amber-500",
+  "roles-permisos": "bg-red-500/10 text-red-500",
+
+  // Legado (por compatibilidad)
   introduccion: "bg-primary/10 text-primary",
   ventas: "bg-accent/10 text-accent",
   productos: "bg-orange-500/10 text-orange-500",
@@ -43,7 +70,6 @@ const coloresPorSeccion: Record<string, string> = {
   reportes: "bg-emerald-500/10 text-emerald-500",
   soporte: "bg-amber-500/10 text-amber-500",
   definicion: "bg-cyan-500/10 text-cyan-500",
-  solhub: "bg-teal-500/10 text-teal-500",
 };
 
 interface IconoSeccionProps {
@@ -54,7 +80,7 @@ interface IconoSeccionProps {
 
 /**
  * Componente para mostrar iconos de cada sección de documentación
- * @param seccion - Identificador de la sección (introduccion, ventas, productos, etc.)
+ * @param seccion - Identificador de la sección
  * @param tamaño - Tamaño del icono (sm, md, lg)
  */
 const IconoSeccion = ({ seccion, tamaño = "md", className = "" }: IconoSeccionProps) => {

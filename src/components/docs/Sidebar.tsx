@@ -5,82 +5,74 @@ import { cn } from "@/lib/utils";
 // Estructura de navegación del manual
 export const seccionesManual = [
   {
-    id: "introduccion",
-    titulo: "Introducción",
-    ruta: "/docs/introduccion",
-    descripcion: "Bienvenida y visión general",
+    id: "inicio",
+    titulo: "Inicio",
+    ruta: "/docs/inicio",
+    descripcion: "Introducción y visión general",
     posicion: 1,
   },
   {
-    id: "ventas",
-    titulo: "Procesar Ventas",
-    ruta: "/docs/procesar-ventas",
-    descripcion: "Gestión de pedidos y ventas",
+    id: "como-instalar-solhub",
+    titulo: "Como instalar SolHub",
+    ruta: "/docs/como-instalar-solhub",
+    descripcion: "Requisitos y pasos de instalación",
     posicion: 2,
   },
   {
-    id: "productos",
-    titulo: "Agregar Productos",
-    ruta: "/docs/agregar-productos",
-    descripcion: "Catálogo y fichas de producto",
+    id: "solhub",
+    titulo: "SolHub",
+    ruta: "/docs/solhub",
+    descripcion: "Visión general del sistema",
     posicion: 3,
   },
   {
-    id: "inventario",
-    titulo: "Gestión de Inventario",
-    ruta: "/docs/gestion-inventario",
-    descripcion: "Control de stock y existencias",
+    id: "exp-propietario",
+    titulo: "1. Experiencia Usuario Propietario",
+    ruta: "/docs/experiencia-propietario",
+    descripcion: "Flujo y tareas principales",
     posicion: 4,
   },
   {
-    id: "pedidos",
-    titulo: "Gestión de Pedidos",
-    ruta: "/docs/gestion-pedidos",
-    descripcion: "Preparación y envío de pedidos",
+    id: "exp-recepcionista",
+    titulo: "2. Experiencia Usuario Recepcionista",
+    ruta: "/docs/experiencia-recepcionista",
+    descripcion: "Registro y atención al paciente",
     posicion: 5,
   },
   {
-    id: "clientes",
-    titulo: "Gestión de Clientes",
-    ruta: "/docs/gestion-clientes",
-    descripcion: "Perfiles y datos de clientes",
+    id: "exp-medico-residente",
+    titulo: "3. Experiencia Usuario Médico Residente",
+    ruta: "/docs/experiencia-medico-residente",
+    descripcion: "Trabajo clínico y seguimiento",
     posicion: 6,
   },
   {
-    id: "configuracion",
-    titulo: "Configuración de la Tienda",
-    ruta: "/docs/configuracion-tienda",
-    descripcion: "Pagos, envíos y ajustes",
+    id: "exp-medico-citotecnologo",
+    titulo: "4. Experiencia Usuario Médico Citotecnologo",
+    ruta: "/docs/experiencia-medico-citotecnologo",
+    descripcion: "Proceso y validación de estudios",
     posicion: 7,
   },
   {
-    id: "seguridad",
-    titulo: "Seguridad y Permisos",
-    ruta: "/docs/seguridad-permisos",
-    descripcion: "Usuarios, roles y accesos",
+    id: "exp-medico-patologo",
+    titulo: "5. Experiencia Usuario Médico Patologo",
+    ruta: "/docs/experiencia-medico-patologo",
+    descripcion: "Revisión y emisión de informes",
     posicion: 8,
   },
   {
-    id: "reportes",
-    titulo: "Reportes y Análisis",
-    ruta: "/docs/reportes-analitica",
-    descripcion: "Informes y estadísticas",
+    id: "exp-medico-owner",
+    titulo: "6. Experiencia Usuario Médico Owner",
+    ruta: "/docs/experiencia-medico-owner",
+    descripcion: "Acceso total y configuración",
     posicion: 9,
   },
   {
-    id: "soporte",
-    titulo: "Conclusión y Soporte",
-    ruta: "/docs/conclusion-soporte",
-    descripcion: "FAQ y recursos adicionales",
+    id: "final",
+    titulo: "Final",
+    ruta: "/docs/final",
+    descripcion: "Cierre y recursos",
     posicion: 10,
-  },
-  {
-    id: "solhub",
-    titulo: "Solhub",
-    ruta: "https://www.solhub.agency/",
-    descripcion: "Software médico inteligente",
-    posicion: 11,
-    esExterno: true,
   },
 ];
 
@@ -174,36 +166,6 @@ const Sidebar = ({ abierto, onCerrar }: SidebarProps) => {
             })}
           </ul>
 
-          {/* Recursos adicionales */}
-          <div className="mt-8 pt-6 border-t">
-            <h2 className="px-3 mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Recursos
-            </h2>
-            <ul className="space-y-1">
-              <li>
-                <a
-                  href="https://help.shopify.com/es"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-sidebar-foreground hover:text-primary rounded-lg transition-colors"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Centro de Ayuda Shopify
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://community.shopify.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-sidebar-foreground hover:text-primary rounded-lg transition-colors"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                  Comunidad Shopify
-                </a>
-              </li>
-            </ul>
-          </div>
         </nav>
       </aside>
     </>

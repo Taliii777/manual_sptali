@@ -27,7 +27,7 @@ const Index = () => {
               Tu guía completa para una gestión sin límites
             </p>
             <Link
-              to="/docs/introduccion"
+              to="/docs/inicio"
               className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-2xl font-semibold text-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:shadow-primary/20"
             >
               Comenzar a leer
@@ -49,12 +49,11 @@ const Index = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {seccionesManual.map((seccion) => (
-              <Link
-                key={seccion.id}
-                to={seccion.ruta}
-                className="group p-6 rounded-2xl border bg-card hover:border-primary hover:shadow-lg transition-all duration-300"
-              >
+            {seccionesManual.map((seccion) => {
+              const className =
+                "group p-6 rounded-2xl border bg-card hover:border-primary hover:shadow-lg transition-all duration-300";
+
+              const contenido = (
                 <div className="flex items-start gap-4">
                   <IconoSeccion seccion={seccion.id} tamaño="md" />
                   <div className="flex-1">
@@ -68,10 +67,29 @@ const Index = () => {
                       {seccion.descripcion}
                     </p>
                   </div>
-                  <ArrowRight size={16} className="text-muted-foreground group-hover:text-primary transition-colors mt-1" />
+                  <ArrowRight
+                    size={16}
+                    className="text-muted-foreground group-hover:text-primary transition-colors mt-1"
+                  />
                 </div>
-              </Link>
-            ))}
+              );
+
+              return seccion.esExterno ? (
+                <a
+                  key={seccion.id}
+                  href={seccion.ruta}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {contenido}
+                </a>
+              ) : (
+                <Link key={seccion.id} to={seccion.ruta} className={className}>
+                  {contenido}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </main>

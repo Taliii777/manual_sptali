@@ -1,13 +1,4 @@
 import DocLayout from "@/layouts/DocLayout";
-import BloqueInfo from "@/components/docs/BloqueInfo";
-import CapturaPantalla from "@/components/docs/CapturaPantalla";
-
-// Dentro de tu JSX:
-<CapturaPantalla 
-  src="/imagenes/instalacion/nombre-imagen.png" 
-  alt="Descripción de la imagen"
-  descripcion="Texto opcional que aparece debajo"
-/>
 
 const secciones = [
   { id: "requisitos", titulo: "Requisitos", nivel: 2 },
@@ -17,20 +8,17 @@ const secciones = [
 const ComoInstalarSolhub = () => {
   return (
     <DocLayout
-      titulo="Como Instalar Solhub"
-      descripcion="Aprende a como instalar Solhub."
+      titulo="Como instalar SolHub"
+      descripcion="Aprende cómo instalar SolHub."
       seccionId="como-instalar-solhub"
       secciones={secciones}
     >
 
       <h2 id="requisitos">Requisitos</h2>
-      
-      <p>
-      -Un navegador web como Chrome, Microsoft Edge, Opera, Brave, entre otros...
-      </p>
-      <p>
-      -Tener acceso a conexion a internet.
-      </p>
+      <ul className="list-disc pl-6 space-y-2 my-4">
+        <li>Un navegador web (Chrome, Microsoft Edge, Opera, Brave, entre otros).</li>
+        <li>Acceso a conexión a internet.</li>
+      </ul>
 
       <h2 id="pasos-para-instalar-solhub">Pasos para instalar SolHub</h2>
       <ol className="list-decimal list-inside space-y-4 my-4">

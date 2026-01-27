@@ -37,10 +37,11 @@ const DocLayout = ({
 
   // Obtener información de la sección actual
   const seccionActual = seccionesManual.find((s) => s.id === seccionId);
+  const totalSecciones = seccionesManual.filter((s) => !s.esExterno).length;
 
   // Construir breadcrumbs
   const breadcrumbItems = [
-    { etiqueta: "Documentación", ruta: "/docs/introduccion" },
+    { etiqueta: "Documentación", ruta: "/docs/inicio" },
     { etiqueta: titulo },
   ];
 
@@ -69,7 +70,7 @@ const DocLayout = ({
                     <div>
                       {seccionActual && (
                         <span className="text-sm text-primary font-medium">
-                          Sección {seccionActual.posicion} de 10
+                          Sección {seccionActual.posicion} de {totalSecciones}
                         </span>
                       )}
                       <h1 className="text-3xl md:text-4xl font-bold text-foreground">

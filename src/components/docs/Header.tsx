@@ -1,4 +1,4 @@
-// Header del Manual de Shopify — Solware
+// Header del Manual SolHub — Solware
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useState, useEffect } from "react";
 import SolwareLogo from "./SolwareLogo";

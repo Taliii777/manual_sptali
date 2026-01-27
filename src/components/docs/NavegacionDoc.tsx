@@ -11,14 +11,20 @@ interface NavegacionDocProps {
  * Componente de navegación anterior/siguiente para documentos
  */
 const NavegacionDoc = ({ rutaActual }: NavegacionDocProps) => {
+  const seccionesInternas = seccionesManual.filter((s) => !s.esExterno);
+
   // Encontrar índice actual
-  const indiceActual = seccionesManual.findIndex(
+  const indiceActual = seccionesInternas.findIndex(
     (s) => s.ruta === rutaActual
   );
 
-  const anterior = indiceActual > 0 ? seccionesManual[indiceActual - 1] : null;
-  const siguiente = indiceActual < seccionesManual.length - 1 
-    ? seccionesManual[indiceActual + 1] 
+  if (indiceActual === -1) {
+    return null;
+  }
+
+  const anterior = indiceActual > 0 ? seccionesInternas[indiceActual - 1] : null;
+  const siguiente = indiceActual < seccionesInternas.length - 1 
+    ? seccionesInternas[indiceActual + 1] 
     : null;
 
   return (
