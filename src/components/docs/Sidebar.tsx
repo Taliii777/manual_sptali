@@ -2,8 +2,17 @@ import { Link, useLocation } from "react-router-dom";
 import IconoSeccion from "./IconoSeccion";
 import { cn } from "@/lib/utils";
 
+interface SeccionManual {
+  id: string;
+  titulo: string;
+  ruta: string;
+  descripcion: string;
+  posicion: number;
+  esExterno?: boolean;
+}
+
 // Estructura de navegación del manual
-export const seccionesManual = [
+export const seccionesManual: SeccionManual[] = [
   {
     id: "inicio",
     titulo: "Inicio",
