@@ -16,6 +16,7 @@ import ExperienciaMedicoResidentePage from "./pages/docs/ExperienciaMedicoReside
 import ExperienciaMedicoCitotecnologoPage from "./pages/docs/ExperienciaMedicoCitotecnologoPage";
 import ExperienciaMedicoPatologoPage from "./pages/docs/ExperienciaMedicoPatologoPage";
 import ExperienciaMedicoOwnerPage from "./pages/docs/ExperienciaMedicoOwnerPage";
+import ExperienciaLaboratorioPage from "./pages/docs/ExperienciaLaboratorioPage";
 import FinalPage from "./pages/docs/FinalPage";
 import RolesPermisosPage from "./pages/docs/RolesPermisosPage";
 
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/docs/experiencia-medico-citotecnologo" element={<ExperienciaMedicoCitotecnologoPage />} />
           <Route path="/docs/experiencia-medico-patologo" element={<ExperienciaMedicoPatologoPage />} />
           <Route path="/docs/experiencia-medico-owner" element={<ExperienciaMedicoOwnerPage />} />
+          <Route path="/docs/laboratorio" element={<ExperienciaLaboratorioPage />} />
           <Route path="/docs/final" element={<FinalPage />} />
 
           {/* Secciones auxiliares */}

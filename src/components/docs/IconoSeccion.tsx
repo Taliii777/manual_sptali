@@ -26,6 +26,7 @@ const iconosPorSeccion: Record<string, LucideIcon> = {
   "exp-medico-citotecnologo": ClipboardList,
   "exp-medico-patologo": ClipboardList,
   "exp-medico-owner": Shield,
+  "exp-laboratorio": Shield,
   final: HelpCircle,
   "roles-permisos": Shield,
 
@@ -55,6 +56,7 @@ const coloresPorSeccion: Record<string, string> = {
   "exp-medico-citotecnologo": "bg-purple-500/10 text-purple-500",
   "exp-medico-patologo": "bg-orange-500/10 text-orange-500",
   "exp-medico-owner": "bg-red-500/10 text-red-500",
+  "exp-laboratorio": "bg-red-500/10 text-red-500",
   final: "bg-amber-500/10 text-amber-500",
   "roles-permisos": "bg-red-500/10 text-red-500",
 

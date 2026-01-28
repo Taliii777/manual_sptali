@@ -2,8 +2,6 @@ import DocLayout from "@/layouts/DocLayout";
 
 const secciones = [
   { id: "solhub", titulo: "SolHub", nivel: 2 },
-  { id: "impacto", titulo: "Impacto en la operación", nivel: 2 },
-  { id: "accesibilidad", titulo: "Accesibilidad total", nivel: 2 },
 ];
 
 const IntroduccionPage = () => {
@@ -27,16 +25,6 @@ const IntroduccionPage = () => {
 
       <p>
       Nuestro ecosistema, esta digitalizado y optimizado en cada etapa del flujo de trabajo, desde el registro de pacientes hasta el análisis de la rentabilidad del laboratorio. Al centralizar toda la información en un entorno seguro, no solo mejoramos la eficiencia operativa y reducimos los costos, sino que también garantizamos una mayor precisión en los datos. Además, esta automatización se encarga de las tareas repetitivas que agobian al personal en el día a día, como la conversión de divisas (dólares a bolívares y viceversa), permitiendo un aumento significativo en la productividad del laboratorio clínico.
-      </p>
-
-      <h2 id="impacto">Impacto en la operación</h2>
-      <p>
-      La ventaja crítica de Solhub reside en su accesibilidad total: al ser una solución basada en la web, garantiza el control absoluto de sus operaciones desde cualquier dispositivo (móvil, tableta o PC) con acceso a internet. Esto asegura que la información más crítica esté siempre al alcance de su mano para una toma de decisiones informada y eficiente, sin importar dónde se encuentre.
-      </p>
-
-      <h2 id="accesibilidad">Accesibilidad total</h2>
-      <p>
-      En este informe, se plasmará en detalle el funcionamiento de este ecosistema
       </p>
     </DocLayout>
   );

@@ -6,18 +6,18 @@ const secciones = [
   { id: "flujo", titulo: "Flujo general", nivel: 2 },
 ];
 
-const ExperienciaMedicoOwnerPage = () => {
+const ExperienciaLaboratorioPage = () => {
   return (
     <DocLayout
-      titulo="Médico Tratante"
+      titulo="Laboratorio"
       descripcion="Generación/edición de informes y envío al paciente."
-      seccionId="exp-medico-owner"
+      seccionId="exp-laboratorio"
       secciones={secciones}
     >
       <h2 id="objetivo">Objetivo</h2>
       <p>
-        Definir el flujo del rol <strong>Médico Tratante</strong> para elaborar el contenido clínico
-        del caso mediante la generación/edición de informes y su posterior envío.
+        Definir el flujo del rol <strong>Laboratorio</strong> para elaborar el contenido clínico del
+        caso mediante la generación/edición de informes y su posterior envío.
       </p>
 
       <h2 id="permisos">Permisos (según matriz)</h2>
@@ -44,4 +44,5 @@ const ExperienciaMedicoOwnerPage = () => {
   );
 };
 
-export default ExperienciaMedicoOwnerPage;
+export default ExperienciaLaboratorioPage;
+
