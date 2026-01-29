@@ -479,17 +479,6 @@ const ExperienciaPropietarioPage = () => {
                   src="/imagenes/2-PRO-CASOS/4.5.png"
                   className="rounded-lg border shadow-md max-w-full h-auto mx-auto"
                 />
-            <li>
-              Selecciona el siguiente botón para editar el caso médico.
-            </li>
-                <img
-                  src="/imagenes/2-PRO-CASOS/4.6.png"
-                  className="rounded-lg border shadow-md max-w-full h-auto mx-auto"
-                />
-                <img
-                  src="/imagenes/2-PRO-CASOS/4.7.png"
-                  className="rounded-lg border shadow-md max-w-full h-auto mx-auto"
-                />
                 <li>
               Selecciona el siguiente botón para editar el caso médico.
             </li>
@@ -767,6 +756,14 @@ const ExperienciaPropietarioPage = () => {
             </li>
             <img
                   src="/imagenes/2-PRO-PACIENTES/5.png"
+                  className="rounded-lg border shadow-md max-w-full h-auto mx-auto"
+                />
+                <img
+                  src="/imagenes/2-PRO-PACIENTES/6.png"
+                  className="rounded-lg border shadow-md max-w-full h-auto mx-auto"
+                />
+                <img
+                  src="/imagenes/2-PRO-PACIENTES/7.png"
                   className="rounded-lg border shadow-md max-w-full h-auto mx-auto"
                 />
           </ol>

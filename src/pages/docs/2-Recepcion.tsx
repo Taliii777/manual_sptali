@@ -475,6 +475,14 @@ const ExperienciaRecepcionistaPage = () => {
                   src="/imagenes/2-PRO-PACIENTES/5.png"
                   className="rounded-lg border shadow-md max-w-full h-auto mx-auto"
                 />
+                <img
+                  src="/imagenes/2-PRO-PACIENTES/6.png"
+                  className="rounded-lg border shadow-md max-w-full h-auto mx-auto"
+                />
+                <img
+                  src="/imagenes/2-PRO-PACIENTES/7.png"
+                  className="rounded-lg border shadow-md max-w-full h-auto mx-auto"
+                />
           </ol>
         </div>
       </div>
