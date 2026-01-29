@@ -66,7 +66,7 @@ const ExperienciaMedicoCitotecnologoPage = () => {
                     className="mt-4 rounded-lg border shadow-md max-w-full h-auto mx-auto"
                   />
           <img
-                    src="/imagenes/4-ENF-INICIO/4.png"
+                    src="/imagenes/4-ENF-INICIO/6.png"
                     alt="Inicio — acceso a otros módulos"
                     className="mt-4 rounded-lg border shadow-md max-w-full h-auto mx-auto"
                   />
